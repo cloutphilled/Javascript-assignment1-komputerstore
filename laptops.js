@@ -4,16 +4,27 @@ const addElement = document.getElementById("add");
 const cartElement = document.getElementById("cart");
 const quantityElement = document.getElementById("quantity");
 const payButtonElement = document.getElementById("pay");
-const totalDueElement = document.getElementById("totalDue")
+const totalDueElement = document.getElementById("totalDue");
+const imagesElement = document.getElementById("image");
+
 
 let computers = [];
 let cart = [];
 let totalDue = 0.0; 
+let pictureList = [];
+
 
 fetch("https://noroff-komputer-store-api.herokuapp.com/computers")
     .then(response => response.json())
     .then(data => computers = data)
     .then(computers => addComputersToMenu(computers));
+
+
+    // FETCH IMAGES - don't know if it works
+fetch("https://noroff-komputer-store-api.herokuapp.com/assets/images")
+    .then(respone => respone.json())
+    .then(data => pictureList = data)
+    .then(pcImage => addImageToMenu(pcImage));
 
 
 const addComputersToMenu = (computers) => {
@@ -26,6 +37,13 @@ const addComputerToMenu = (computers) => {
     computerElement.value = computers.id;
     computerElement.appendChild(document.createTextNode(computers.title));
     computersElement.appendChild(computerElement);
+}
+
+const addImageToMenu = (computers) => {
+    const imageElement = document.createElement("img");
+    imageElement.value = computers.image;
+    imageElement.appendChild(document.createTextNode(computers.id.image));
+    imagesElement.appendChild(imageElement);
 }
 
 const handleComputerMenuChange = e => {
@@ -52,6 +70,8 @@ const handlePay = () => {
     const change = parseFloat(totalPaid) - totalDue;
     alert(`Total change due: ${change.toFixed(2)}`);
 }
+
+
 
 computersElement.addEventListener("change", handleComputerMenuChange);
 addElement.addEventListener("click", handleAddComputer);
