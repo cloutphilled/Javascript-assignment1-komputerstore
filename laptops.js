@@ -1,3 +1,6 @@
+// import './bank';
+// import './work';
+
 const computersElement = document.getElementById("computers");
 const priceElement = document.getElementById("price");
 const addElement = document.getElementById("add");
@@ -6,6 +9,11 @@ const quantityElement = document.getElementById("quantity");
 const payButtonElement = document.getElementById("pay");
 const totalDueElement = document.getElementById("totalDue");
 const imagesElement = document.getElementById("image");
+const workButtonElement = document.getElementById("work");
+const workBalanceElement = document.getElementById("workBalance");
+const accountBalanceElement = document.getElementById("accountBalance");
+const bankButtonElement = document.getElementById("getLoan");
+const toBankButton = document.getElementById("toBank");
 
 
 let computers = [];
@@ -71,8 +79,18 @@ const handlePay = () => {
     alert(`Total change due: ${change.toFixed(2)}`);
 }
 
+function clickWorkButton(){
+    workBalanceElement.innerText = parseInt(workBalanceElement.textContent,10) + 100;
+}
+
+function clickBankButton(){
+    accountBalanceElement.innerHTML = parseInt(accountBalanceElement.textContent,10) + parseInt(workBalanceElement.textContent,10);
+    workBalanceElement.innerHTML = 0;
+}
 
 
 computersElement.addEventListener("change", handleComputerMenuChange);
 addElement.addEventListener("click", handleAddComputer);
 payButtonElement.addEventListener("click", handlePay);
+workButtonElement.addEventListener("click", clickWorkButton);
+toBankButton.addEventListener("click", clickBankButton);

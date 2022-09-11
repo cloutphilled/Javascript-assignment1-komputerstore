@@ -1,4 +1,7 @@
+import './laptops.js';
+import './work.js';
 const accountBalanceElement = document.getElementById("accountBalance");
+const bankButtonElement = document.getElementById("bankLabel");
 
 let totalBalance = 0.0;
 
@@ -8,5 +11,9 @@ let totalBalance = 0.0;
 //     currency: 'USD',
 //     minimumFractionDigits: 2,
 // });
+function clickBankButton(){
+    accountBalanceElement.innerText = parseInt(accountBalanceElement.textContent,10) + parseInt(workBalanceElement);
+    workBalanceElement.innerText = 0;
+}
 
-
+bankButtonElement.addEventListener("click", clickBankButton);
