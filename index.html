@@ -12,9 +12,12 @@
             <div class="container">
         <h1>Komputer Store</h1>
         <p>Please add computers to your cart below</p>
-        <select name="computers" id="computers">
-        </select>
-        <img id="pcImage" src="https://noroff-komputer-store-api.herokuapp.com/assets/images/1.png"/>
+        <select name="computers" id="computers"></select>
+        <p>Specs:</p>
+        <ul class="p" id="specs"></ul>
+        <img id="pcImage" src="" alt="computer image"/>
+        <label id="computerTitle">Computer Title</label>
+        
         <label id="price">Price</label>
         <input type="number" name="quantity" id="quantity" min="0" max="10" value="1">
         <button id="add">Add to cart</button>

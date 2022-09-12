@@ -14,7 +14,10 @@ const workBalanceElement = document.getElementById("workBalance");
 const accountBalanceElement = document.getElementById("accountBalance");
 const bankButtonElement = document.getElementById("getLoan");
 const toBankButton = document.getElementById("toBank");
-
+const computerDescriptionElement = document.getElementById("computerDescription");
+const computerSpecsElement = document.getElementById("specs");
+const computerTitleElement = document.getElementById("title");
+const computerImageElement = document.getElementById("computerImage");
 
 let computers = [];
 let cart = [];
@@ -47,16 +50,25 @@ const addComputerToMenu = (computers) => {
     computersElement.appendChild(computerElement);
 }
 
-const addImageToMenu = (computers) => {
-    const imageElement = document.createElement("img");
-    imageElement.value = computers.image;
-    imageElement.appendChild(document.createTextNode(computers.id.image));
-    imagesElement.appendChild(imageElement);
+const addImageToMenu = e => {
+    computerDescriptionElement.innerText = "";
+    const selectedComputer = computers[e.target.selectedIndex];
+    computerTitleElement.innerText = selectedComputer.title;
+    computerDescriptionElement.innerText = selectedComputer.description;
+    priceElement.innerText = selectedComputer.price;
+    computerImageElement.src = "https://noroff-komputer-store-api.herokuapp.com/" + selectedComputer.image;
+    selectedComputer.specs.forEach(x => addComputerSpecsToMenu(x));
 }
 
 const handleComputerMenuChange = e => {
     const selectedComputer = computers[e.target.selectedIndex];
     priceElement.innerText = "Price: " + selectedComputer.price;
+}
+
+const addComputerSpecsToMenu = (specs) => {
+    const featureElement = document.createElement("li");
+    computerSpecsElement.appendChild(featureElement);
+    featureElement.innerText = specs;
 }
 
 const handleAddComputer = () => {
