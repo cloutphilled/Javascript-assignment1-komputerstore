@@ -1,0 +1,45 @@
+.container {
+    background-color: rgb(230,230,230);
+    border-radius: 25px;
+    padding: 20px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.section{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    column-gap: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.topBar{
+    display: block;
+    padding: 8px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.computer-info {
+    background-color: rgb(230,230,230);
+    border-radius: 25px;
+    padding: 20px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+img {
+    padding-right: 20px;
+    float: left;
+    height: 100%;
+    width: height;
+    
+}

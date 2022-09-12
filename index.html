@@ -1,59 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Komputer Store</title>
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+    <meta name="viewport" content="width=deivce-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>Assignment 1</title>
 </head>
+    <body>
+        <div class="topBar"><h1>Komputer Store</h1></div>
+        <div class="section">
+            <div class="container">
+        
+        <p>Please add computers to your cart below</p>
+        <select name="computers" id="computers"></select>
+        <p>Specs:</p>
+        <ul class="p" id="specs">
 
-<body>
-    <div class="topBlackBar">Komputer Store</div>
-    <div class="wrapper">
-        <div class="boxes">
-            <h1><b>Joe Banker</b></h1>
-            <span>Balance:</span>
-            <span style="float:right"> DKK</span>
-            <span style="float:right;" id="bank-balance">0</span>
+        </ul>
+        
+        
+        <label id="price">Price</label>
+        <input type="number" name="quantity" id="quantity" min="0" max="10" value="1">
+        <button id="add">Add to cart</button>
+        
+        <h4>Cart:</h4>
+        <ul id="cart">
+
+        </ul>
+        <p id="totalDue">Total Due: 0.0</p>
+        <button id="pay">Buy now</button>
+        </div>
+    
+    
+        <div class="container">
+            <h1><strong>Bank</strong></h1>
+            <p id="balance">Balance:
+                <span id="accountBalance">0</span>
+            </p>
             <br>
-            <div style="display: none;"id="loan-info">            
-                <span >Loan: </span>
-                <span style="float:right"> DKK</span>
-                <span style="float:right;" id="loan-balance">0</span>
-            </div>
-            <button class="loan" id="button-loan">Get a loan</button>
+            <button class="bankButton" id="getLoanButton">Click here to withdraw</button>
         </div>
-        <div class="boxes">
-            <h1><b>Work</b></h1>
-            <span style="text-align:left;">Pay: </span>
-            <span style="float:right"> DKK</span>
-            <span style="float:right;" id="work-balance">0</span>
-            <button class="repay-loan" id="button-repay" style="display: none;">Repay loan</button>
+    
+    
+        <div class="container">
+            <h1>Work</h1>
+            <p id="workPay">Pay:
+                <span id="workBalance">0</span>
+            </p>
             <br>
-            <button class="bank" id="bank">Bank</button>
-            <button class="work" id="work">Work</button>
+            <button class="toBankButton" id="toBank">To Bank</button>
+            <button class="workButton" id="work">Do work</button>
         </div>
-        <div class="boxes">
-            <h1><b>Laptops</b></h1>
-            <select name="laptops" id="laptops"></select>
-            <p>Features:</p>
-            <ul class="p" id="features">
-            </ul>
+    
+    
+        <div class ="computer-info">
+            <img id="laptop-image" src="" alt="computer image"/>
+            <span id="computerTitle">Computer Title</span>
+            <span id="price">0</span>
+            <br>
+            <span id="computerDescription">Computer Description</span>
         </div>
-
-    </div>
-    <div class="boxes-laptop">
-        <img style="float:left" id="laptop-image" src="" alt="Laptop image" width="height" height="100%">
-        <span class="a" id="laptop-title">Laptop Title</span>
-        <span class="b" style="float:right"> DKK</span>
-        <span class="b" style="float:right" id="laptop-price">0</span>
-        <br>
-        <span class="c" id="laptop-description">Laptop description</span>
-        <button class="buy" style="float:right" id="button-buy">BUY NOW</button>
-    </div>
-    <script src="app.js"></script>
-</body>
-
-</html>
+        </div>
+    
+        <script src="app.js"></script>
+       
+    </body>
+    </html>
+    
