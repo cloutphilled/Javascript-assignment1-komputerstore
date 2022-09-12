@@ -15,9 +15,9 @@ const accountBalanceElement = document.getElementById("accountBalance");
 const bankButtonElement = document.getElementById("getLoan");
 const toBankButton = document.getElementById("toBank");
 const computerDescriptionElement = document.getElementById("computerDescription");
-const computerSpecsElement = document.getElementById("specs");
 const computerTitleElement = document.getElementById("title");
-const computerImageElement = document.getElementById("computerImage");
+const computerImageElement = document.getElementById("laptop-image");
+const computerSpecsElement = document.getElementById("specs");
 
 let computers = [];
 let cart = [];
@@ -32,15 +32,19 @@ fetch("https://noroff-komputer-store-api.herokuapp.com/computers")
 
 
     // FETCH IMAGES - don't know if it works
-fetch("https://noroff-komputer-store-api.herokuapp.com/assets/images")
-    .then(respone => respone.json())
-    .then(data => pictureList = data)
-    .then(pcImage => addImageToMenu(pcImage));
+// fetch("https://noroff-komputer-store-api.herokuapp.com/assets/images")
+//     .then(respone => respone.json())
+//     .then(data => pictureList = data)
+//     .then(pcImage => addImageToMenu(pcImage));
 
 
 const addComputersToMenu = (computers) => {
     computers.forEach(x => addComputerToMenu(x));
-    priceElement.innerText = "Price: " + computers[0].price;
+    computers[0].specs.forEach(x => addComputerSpecsToMenu(x));
+    computerTitleElement.innerText = computers[0].title;
+    computerDescriptionElement.innerText = computers[0].description;
+    priceElement.innerText = computers[0].price;
+    computerImageElement.src = "https://noroff-komputer-store-api.herokuapp.com/" + computers[0].image;
 }
 
 const addComputerToMenu = (computers) => {
@@ -50,8 +54,18 @@ const addComputerToMenu = (computers) => {
     computersElement.appendChild(computerElement);
 }
 
-const addImageToMenu = e => {
-    computerDescriptionElement.innerText = "";
+// const addImageToMenu = e => {
+//     computerDescriptionElement.innerText = "";
+//     const selectedComputer = computers[e.target.selectedIndex];
+//     computerTitleElement.innerText = selectedComputer.title;
+//     computerDescriptionElement.innerText = selectedComputer.description;
+//     priceElement.innerText = selectedComputer.price;
+//     computerImageElement.src = "https://noroff-komputer-store-api.herokuapp.com/" + selectedComputer.image;
+//     selectedComputer.specs.forEach(x => addComputerSpecsToMenu(x));
+// }
+
+const handleComputerMenuChange = e => {
+    computerSpecsElement.innerHTML = "";
     const selectedComputer = computers[e.target.selectedIndex];
     computerTitleElement.innerText = selectedComputer.title;
     computerDescriptionElement.innerText = selectedComputer.description;
@@ -60,15 +74,10 @@ const addImageToMenu = e => {
     selectedComputer.specs.forEach(x => addComputerSpecsToMenu(x));
 }
 
-const handleComputerMenuChange = e => {
-    const selectedComputer = computers[e.target.selectedIndex];
-    priceElement.innerText = "Price: " + selectedComputer.price;
-}
-
 const addComputerSpecsToMenu = (specs) => {
     const featureElement = document.createElement("li");
     computerSpecsElement.appendChild(featureElement);
-    featureElement.innerText = specs;
+    featureElement.innerHTML = specs;
 }
 
 const handleAddComputer = () => {
