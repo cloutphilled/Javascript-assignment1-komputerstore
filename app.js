@@ -57,8 +57,8 @@ const handleComputerMenuChange = e => {
     const path = "https://noroff-komputer-store-api.herokuapp.com/";
     computerImageElement.src = path.concat(selectedComputer.image);
     computerTitleElement.innerText = selectedComputer.title;
-    computerDescriptionElement.innerText = selectedComputer.description;
-    priceElement.innerText = selectedComputer.price;
+    computerDescriptionElement.innerText = "'" + selectedComputer.description + "'";
+    priceElement.innerText = "$" + selectedComputer.price;
 }  
   
 
@@ -73,7 +73,7 @@ const handleAddComputer = () => {
     cartElement.appendChild(cartItem);
 
     totalDue += lineTotal;
-    totalDueElement.innerText = `Total Due: ${totalDue.toFixed(2)}`;
+    totalDueElement.innerText = `Total Due: $ ${totalDue.toFixed(2)}`;
 }
 
 // This function handles the payment
@@ -82,12 +82,12 @@ const handleAddComputer = () => {
 const handlePay = () => {
     if (parseInt(priceElement.innerText, 10) <= parseInt(accountBalanceElement.textContent, 10)) {
         accountBalanceElement.innerText = parseInt(accountBalanceElement.textContent,10) - parseInt(priceElement.innerText,10);
-        alert('You have succesfully purchased the ' + computerTitleElement.innerText + '.');
-    }
+        alert('You have succesfully purchased the ' + computerTitleElement.innerText + '!');
+    } 
     else {
         alert('You require more minerals!');
     }
-    
+    // Needs a clear cart function here
 }
 
 // When this button is clicked the user is provided with funds equal to 100
@@ -104,21 +104,21 @@ const clickBankButton = () => {
 
 // Loan button
 // Doesn't work as of now
-const clickLoanButton = () =>{
-    if (loanBalanceElement.innerText == 0) {
-        let amount = prompt ('Enter the amount you wish to loan.', '1000');
-        if(amount <= parseInt(accountBalanceElement.textContent, 10)) {
-            accountBalanceElement.innerText = parseInt(accountBalanceElement.textContent, 10) + parseInt(amount, 10);
-            loanBalanceElement.innerText = amount;
-        }
-        else {
-            alert('We require more minerals - you are not eligible for a loan');
-        }
-    }
-    else{
-    alert('NAN');
-}
-}
+// const clickLoanButton = () =>{
+//     if (loanBalanceElement.innerText == 0) {
+//         let amount = prompt ('Enter the amount you wish to loan.', '1000');
+//         if(amount <= parseInt(accountBalanceElement.textContent, 10)) {
+//             accountBalanceElement.innerText = parseInt(accountBalanceElement.textContent, 10) + parseInt(amount, 10);
+//             loanBalanceElement.innerText = amount;
+//         }
+//         else {
+//             alert('We require more minerals - you are not eligible for a loan');
+//         }
+//     }
+//     else{
+//     alert('NAN');
+// }
+// }
 
 
 

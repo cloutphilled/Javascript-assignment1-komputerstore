@@ -38,9 +38,9 @@ body {
 
 .topBar{
     display: block;
-    padding: px;
+    
     background-color: transparent;
-    color: rgba(0, 0, 0, 0.421);
+    color: rgba(0, 0, 0, 0.568);
     border-radius: 10px;
     font-size: 30px;
     text-align: center;
@@ -48,14 +48,21 @@ body {
 }
 
 
+#kuff {
+    opacity: .75;
+    position: absolute;
+    top:2%;
+    right: 36%;
+    width: 2.75%;
+
+}
 
 
-img {
-    padding-right: 20px;
-    float: right;
+#laptop-image {
+    
     height: 50%;
-    
-    
+    position: absolute;
+    right: 5%;
 }
 
 button {
@@ -79,31 +86,44 @@ button {
     flex: none;
     order:1;
     flex-grow:0;
+    background-color: #ffffff93;
 }
 
  #quantity {
     position: absolute;
     /* float:inline-start; */
-    bottom: 5%;
+    bottom: 6%;
     right: 17%;
+    text-align: left;
+    font-family: 'Seat Bcn bold';
 }
 
 #price {
     position: absolute;
     bottom: 5%;
-    left: 6.5%;
+    left: 3%;
 }
 
-#money {
-    
+
+#totalDue {
     position: absolute;
-    bottom: 5%;
-    left: 5%;
+    left: 3%;
+    bottom: 3%;
+}
+
+#accountBalance, #loan-balance, #workBalance,
+#balance, #loan, #workPay {
+    font-size: 40px;
+}
+
+h1 {
+    font-size: 50px;
+    background-image: ;
 }
 
 #add {
     position: absolute;
-
+    
 }
 
 #pay {

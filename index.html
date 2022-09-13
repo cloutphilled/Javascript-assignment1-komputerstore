@@ -8,7 +8,10 @@
     <title>Assignment 1</title>
 </head>
     <body>
-        <div class="topBar"><h1>Komputer Store</h1></div>
+        <div class="topBar">
+            <h1>Komputer Store</h1>
+            <img id="kuff" src="/static/Images/i_kan_ikke_styre_det.png" alt="kuff slice"/>
+        </div>
         <div class="section">
             <div class="container">
         
@@ -16,19 +19,19 @@
         <select name="computers" id="computers">Select a product</select>
         <img id="laptop-image" src="" alt="computer image"/>
         
-        <p id="title">Computer Title</p>
+        <p id="title"></p>
         <p>Specs:</p>
         <ul class="p" id="specs">
 
         </ul>
-        <span id="computerDescription">Computer Description</span>
+        <span id="computerDescription"></span>
         <br>
         <div class="price-container">
-        <label id="money">$</label>
+        
         <label id="price"></label>
         <input id="quantity" type="number" name="quantity" id="quantity" min="0" max="10" value="1">
         </div>
-        <button id="add">Add to cart</button>
+        <button id="add">Add to 🛒</button>
         
         
         
@@ -38,7 +41,7 @@
         <div class="container">
             
                 
-                <h4>Cart:</h4>
+                <h4>Cart 🛒</h4>
                 <ul id="cart">
                 </ul>
                 
@@ -52,10 +55,10 @@
     
         <div class="container" id="bank-container">
             <h1><strong>Bank</strong></h1>
-            <p id="balance">Balance:
+            <p id="balance">Balance: $
                 <span id="accountBalance">0</span>
             </p>
-            <p id="loan">Loan:
+            <p id="loan">Loan: $
                 <span id="loan-balance">0</span>
             </p>
             <br>
@@ -68,7 +71,7 @@
     
         <div class="container" id="work-container">
             <h1>Work</h1>
-            <p id="workPay">Pay:
+            <p id="workPay">Pay: $
                 <span id="workBalance">0</span>
             </p>
             <br>
