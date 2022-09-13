@@ -52,7 +52,7 @@ const addComputerToMenu = (computers) => {
 
 const handleComputerMenuChange = e => {
     const selectedComputer = computers[e.target.selectedIndex];
-    computerSpecsElement.innerText = selectedComputer.specs.join(".\n")+".";
+    computerSpecsElement.innerText = selectedComputer.specs.join("\n");
     const path = "https://noroff-komputer-store-api.herokuapp.com/";
     computerImageElement.src = path.concat(selectedComputer.image);
     computerTitleElement.innerText = selectedComputer.title;

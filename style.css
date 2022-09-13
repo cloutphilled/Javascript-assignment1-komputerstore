@@ -19,9 +19,7 @@ body {
     height: 350px;
     position: relative;
     overflow: hidden;
-    font-family: 'Seat Bcn regular';
-    
-    
+    font-family: 'Seat Bcn regular';   
 }
 
 .section{
@@ -66,28 +64,29 @@ img {
 button {
     color: black;
     background-color: white;
-    left: 5%;
+    right: 5%;
     width: 40%;
     bottom: 5%;
     display: table-cell;
-    position: absolute;
+    
     font-size: 16px;
     cursor: pointer;
     outline: none;
     border: none;
     text-decoration: none;
     border-radius: 5px;
-    float: right;
+    
 }
 
 #price, #quantity {
-    position: bottom;
+    position: relative;
+    float:inline-start;
 
 }
 
 #add {
-    position:absolute;
-    float: right;
+    position: absolute;
+
 }
 
 #pay {
@@ -109,9 +108,44 @@ span {
 
 #computerDescription {
     float: right;
-    text-align: left;
+    text-align: right;
 }
 
 .computer-price {
     float: right;
+}
+#specs{
+    font-size: 12px;
+}
+
+.workButton {
+    position: static;
+    
+    bottom: 0;
+    right:0;
+}
+
+.toBankButton {
+    position: static;
+    bottom:0;
+    left:0;
+}
+
+#work-container, #bank-container {
+    text-align: center;
+}
+
+
+.bankButton {
+    position: static;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+#price-container {
+    position: absolute;
+    bottom:5%;
+    left:5%;
 }
