@@ -24,7 +24,7 @@
         <span id="computerDescription">Computer Description</span>
         <br>
         <div class="price-container">
-        <label>$</label>
+        <label id="money">$</label>
         <label id="price"></label>
         <input id="quantity" type="number" name="quantity" id="quantity" min="0" max="10" value="1">
         </div>
@@ -55,8 +55,14 @@
             <p id="balance">Balance:
                 <span id="accountBalance">0</span>
             </p>
+            <p id="loan">Loan:
+                <span id="loan-balance">0</span>
+            </p>
             <br>
-            <button class="bankButton" id="getLoanButton">Click here to withdraw</button>
+            <div class="button-before"></div>
+            <button class="bankButton" id="getLoanButton">Loan</button>
+            <div class="button"></div>
+        
         </div>
     
     

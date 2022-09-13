@@ -18,6 +18,7 @@ const computerDescriptionElement = document.getElementById("computerDescription"
 const computerTitleElement = document.getElementById("title");
 const computerImageElement = document.getElementById("laptop-image");
 const computerSpecsElement = document.getElementById("specs");
+const loanBalanceElement =  document.getElementById("loan-balance");
 
 let computers = [];
 let cart = [];
@@ -75,20 +76,51 @@ const handleAddComputer = () => {
     totalDueElement.innerText = `Total Due: ${totalDue.toFixed(2)}`;
 }
 
+// This function handles the payment
+// It then checks if there's enough funds on the account
+// If not --> not enough minerals
 const handlePay = () => {
-    const totalPaid = prompt("Please enter the amount of money you wish to play: ");
-    const change = parseFloat(totalPaid) - totalDue;
-    alert(`Total change due: ${change.toFixed(2)}`);
+    if (parseInt(priceElement.innerText, 10) <= parseInt(accountBalanceElement.textContent, 10)) {
+        accountBalanceElement.innerText = parseInt(accountBalanceElement.textContent,10) - parseInt(priceElement.innerText,10);
+        alert('You have succesfully purchased the ' + computerTitleElement.innerText + '.');
+    }
+    else {
+        alert('You require more minerals!');
+    }
+    
 }
 
-function clickWorkButton(){
+// When this button is clicked the user is provided with funds equal to 100
+const clickWorkButton = () => {
     workBalanceElement.innerText = parseInt(workBalanceElement.textContent,10) + 100;
 }
 
-function clickBankButton(){
+// This button transfers the funds acquired via work to the user's bank account
+const clickBankButton = () => {
     accountBalanceElement.innerHTML = parseInt(accountBalanceElement.textContent,10) + parseInt(workBalanceElement.textContent,10);
     workBalanceElement.innerHTML = 0;
 }
+
+
+// Loan button
+// Doesn't work as of now
+const clickLoanButton = () =>{
+    if (loanBalanceElement.innerText == 0) {
+        let amount = prompt ('Enter the amount you wish to loan.', '1000');
+        if(amount <= parseInt(accountBalanceElement.textContent, 10)) {
+            accountBalanceElement.innerText = parseInt(accountBalanceElement.textContent, 10) + parseInt(amount, 10);
+            loanBalanceElement.innerText = amount;
+        }
+        else {
+            alert('We require more minerals - you are not eligible for a loan');
+        }
+    }
+    else{
+    alert('NAN');
+}
+}
+
+
 
 
 computersElement.addEventListener("change", handleComputerMenuChange);
@@ -96,3 +128,4 @@ addElement.addEventListener("click", handleAddComputer);
 payButtonElement.addEventListener("click", handlePay);
 workButtonElement.addEventListener("click", clickWorkButton);
 toBankButton.addEventListener("click", clickBankButton);
+bankButtonElement.addEventListener('click', clickLoanButton);
