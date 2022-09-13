@@ -36,8 +36,8 @@ const addComputersToMenu = (computers) => {
     // computers[0].specs.forEach(x => addComputerSpecsToMenu(x));
     computerTitleElement.innerText = computers[0].title;
     computerDescriptionElement.innerText = computers[0].description;
-    priceElement.innerText = computers[0].price;
-    computerImageElement.src = "https://noroff-komputer-store-api.herokuapp.com/" + computers[0].image;
+    // priceElement.innerText = computers[0].price;
+    // computerImageElement.src = "https://noroff-komputer-store-api.herokuapp.com/" + computers[0].image;
 }
 
 const addComputerToMenu = (computers) => {
@@ -52,7 +52,7 @@ const addComputerToMenu = (computers) => {
 
 const handleComputerMenuChange = e => {
     const selectedComputer = computers[e.target.selectedIndex];
-    computerSpecsElement.innerText = selectedComputer.specs;
+    computerSpecsElement.innerText = selectedComputer.specs.join(".\n")+".";
     const path = "https://noroff-komputer-store-api.herokuapp.com/";
     computerImageElement.src = path.concat(selectedComputer.image);
     computerTitleElement.innerText = selectedComputer.title;

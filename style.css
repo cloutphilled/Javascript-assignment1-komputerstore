@@ -5,20 +5,22 @@
     height: 350px;
     position: relative;
     overflow: hidden;
+    
 }
 
 .section{
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    column-gap: 5%;
-    padding-top: 5%;
+    grid-template-columns: 2fr 2fr;
+    column-gap: 1%;
+    row-gap: 1%;
+    padding-top: 0%;
     padding-bottom: 5%;
 }
 
 .topBar{
     display: block;
-    padding: 8px;
+    padding: px;
     background-color: black;
     color: white;
     border-radius: 10px;
@@ -38,8 +40,60 @@
 
 img {
     padding-right: 20px;
-    float: left;
-    height: 100%;
-    width: height;
+    float: right;
+    height: 50%;
     
+    
+}
+
+button {
+    color: black;
+    background-color: white;
+    left: 5%;
+    width: 40%;
+    bottom: 5%;
+    display: table-cell;
+    position: absolute;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    float: right;
+}
+
+#price, #quantity {
+    position: bottom;
+
+}
+
+#add {
+    position:absolute;
+    float: right;
+}
+
+#pay {
+    position: relative;
+}
+
+span {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    white-space: pre-wrap;
+}
+
+#title {
+    text-align: left;
+}
+
+#computerDescription {
+    float: right;
+    text-align: left;
+}
+
+.computer-price {
+    float: right;
 }

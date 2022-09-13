@@ -14,23 +14,36 @@
         
         <p>Please add computers to your cart below</p>
         <select name="computers" id="computers"></select>
+        <img id="laptop-image" src="" alt="computer image"/>
+        
+        <p id="title">Computer Title</p>
         <p>Specs:</p>
         <ul class="p" id="specs">
 
         </ul>
-        
-        
+        <span id="computerDescription">Computer Description</span>
+        <br>
         <label id="price">Price</label>
-        <input type="number" name="quantity" id="quantity" min="0" max="10" value="1">
+        <input id="quantity" type="number" name="quantity" id="quantity" min="0" max="10" value="1">
         <button id="add">Add to cart</button>
         
-        <h4>Cart:</h4>
-        <ul id="cart">
-
-        </ul>
-        <p id="totalDue">Total Due: 0.0</p>
-        <button id="pay">Buy now</button>
+        
+        
+        
         </div>
+        <div class="container">
+            <div class ="computer-info">
+                
+                <h4>Cart:</h4>
+                <ul id="cart">
+                </ul>
+                
+                <br>
+                
+                <p id="totalDue">Total Due: 0.0</p>
+            <button id="pay">Buy now</button>
+            </div>
+            </div>
     
     
         <div class="container">
@@ -53,15 +66,8 @@
             <button class="workButton" id="work">Do work</button>
         </div>
     
-    
-        <div class ="computer-info">
-            <img id="laptop-image" src="" alt="computer image"/>
-            <span id="computerTitle">Computer Title</span>
-            <span id="price">0</span>
-            <br>
-            <span id="computerDescription">Computer Description</span>
-        </div>
-        </div>
+        
+    </div>
     
         <script src="app.js"></script>
        
