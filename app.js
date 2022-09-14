@@ -57,7 +57,7 @@ const handleComputerMenuChange = e => {
     const path = "https://noroff-komputer-store-api.herokuapp.com/";
     computerImageElement.src = path.concat(selectedComputer.image);
     computerTitleElement.innerText = selectedComputer.title;
-    computerDescriptionElement.innerText = "'" + selectedComputer.description + "'";
+    computerDescriptionElement.innerText = "' " + selectedComputer.description + " '";
     priceElement.innerText = "$" + selectedComputer.price;
 }  
   
@@ -69,7 +69,7 @@ const handleAddComputer = () => {
     const cartItem = document.createElement("li");
     const lineTotal = quantity * selectedComputer.price;
 
-    cartItem.innerText = `${selectedComputer.title} ${selectedComputer.price} ${quantity} ${lineTotal.toFixed(2)}`;
+    cartItem.innerText = `${selectedComputer.title} $ ${selectedComputer.price} `;
     cartElement.appendChild(cartItem);
 
     totalDue += lineTotal;

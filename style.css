@@ -19,7 +19,7 @@ body {
     animation: changeBg 15s linear infinite;
 }
 .container {
-    background-color: rgba(44, 41, 41, 0.101);
+    background-color: rgba(44, 41, 41, 0.051);
     border-radius: 5px;
     padding: 20px;
     height: 350px;
@@ -29,6 +29,7 @@ body {
     font: weight 900px;
     display: flexbox;
     align-items: center;
+    padding:5%;
     
 }
 
@@ -71,10 +72,11 @@ body {
 #laptop-image {
     
     width: 25%;
-    position: absolute;
-    right: 5%;
+    position: relative;
+    /* right: 5%;
     bottom: 20%;
-    top: 15%;
+    top: 20%; */
+    float: right;
     
 }
 
@@ -133,7 +135,15 @@ button {
 
 h1 {
     font-size: 50px;
-    background-image: ;
+    animation: textclip 5s linear infinite;
+}
+
+h2{
+    font-size: 50px;
+}
+
+#title {
+    
 }
 
 #add {
@@ -220,6 +230,33 @@ span {
     }
     100%{
         background-color: seagreen;
+    }
+}
+
+@keyframes textclip{
+    0% {
+        color: red;
+        font-size: 50px;
+    }
+    20%{
+        color: aquamarine;
+        font-size: 52px;
+    }
+    40%{
+     color: azure;
+     font-size: 54px;
+    }
+    60%{
+        color: currentColor;
+        font-size: 56px;
+    }
+    80%{
+        color: greenyellow;
+        font-size: 54px;
+    }
+    100%{
+        color: seagreen;
+        font-size: 52px;
     }
 }
 
