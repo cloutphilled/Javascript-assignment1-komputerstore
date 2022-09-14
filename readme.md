@@ -42,5 +42,8 @@ Then you will receive a prompt congratulating the purchase
 ```
 
 
+![](https://gitlab.com/cloutphilled/javascript-assignment-1/static/images/Vulture_SC1_HeadAnim1.webp)
+
+
 
 Created by Phillip Friis Petersen
