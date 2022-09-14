@@ -1,7 +1,7 @@
 # FrontEnd assignment #1
 > Create a Dynamic Webpage using JS
 
-![Alt text](https://gitlab.com/cloutphilled/javascript-assignment-1/-/raw/main/static/Images/1505511535290.gif)
+![Alt text](https://gitlab.com/cloutphilled/javascript-assignment-1/-/raw/main/static/Images/Vulture_SC1_HeadAnim1.webp)
 
 This is the first FrontEnd assignment as part of the Noroff fullstack Java bootcamp.
 The user is presented with a web application titled 'Komputer Store'.
