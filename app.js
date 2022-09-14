@@ -19,6 +19,7 @@ const computerTitleElement = document.getElementById("title");
 const computerImageElement = document.getElementById("laptop-image");
 const computerSpecsElement = document.getElementById("specs");
 const loanBalanceElement =  document.getElementById("loan-balance");
+const repayLoanElement = document.getElementById("repayLoanButton");
 
 
 let computers = [];
@@ -120,7 +121,19 @@ const clickLoanButton = () =>{
     }
     else{
     alert("You need to repay your loan - otherwise we're gonna get ya!");
+    }
 }
+
+const repay = () =>{
+    let accountBalance = parseInt(accountBalanceElement.textContent, 10);
+    let loan = parseInt(loanBalanceElement.textContent, 10);
+    if (loan > accountBalance) {
+        loanBalanceElement.innerText = loan - accountBalance;
+        accountBalanceElement.innerText = 0;
+    } else {
+        accountBalanceElement.innerText = accountBalance - loan;
+        loanBalanceElement.innerText = 0;
+    }
 }
 
 
@@ -132,3 +145,5 @@ payButtonElement.addEventListener("click", handlePay);
 workButtonElement.addEventListener("click", clickWorkButton);
 toBankButton.addEventListener("click", clickBankButton);
 bankButtonElement.addEventListener('click', clickLoanButton);
+repayLoanElement.addEventListener('click', repay);
+

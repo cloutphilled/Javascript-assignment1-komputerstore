@@ -202,6 +202,12 @@ span {
     left:5%;
 }
 
+.repayLoanButton {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
 #work-container, #bank-container {
     text-align: center;
 }
