@@ -49,4 +49,4 @@ Then you will receive a prompt congratulating the purchase
 [Link to heroku](https://js-assignment-komputerstore.herokuapp.com/)
 
 
-Created by Phillip Friis Petersen
+## Created by Phillip Friis Petersen
