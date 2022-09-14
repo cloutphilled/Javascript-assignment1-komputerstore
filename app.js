@@ -12,13 +12,14 @@ const imagesElement = document.getElementById("image");
 const workButtonElement = document.getElementById("work");
 const workBalanceElement = document.getElementById("workBalance");
 const accountBalanceElement = document.getElementById("accountBalance");
-const bankButtonElement = document.getElementById("getLoan");
+const bankButtonElement = document.getElementById("getLoanButton");
 const toBankButton = document.getElementById("toBank");
 const computerDescriptionElement = document.getElementById("computerDescription");
 const computerTitleElement = document.getElementById("title");
 const computerImageElement = document.getElementById("laptop-image");
 const computerSpecsElement = document.getElementById("specs");
 const loanBalanceElement =  document.getElementById("loan-balance");
+
 
 let computers = [];
 let cart = [];
@@ -106,21 +107,21 @@ const clickBankButton = () => {
 
 // Loan button
 // Doesn't work as of now
-// const clickLoanButton = () =>{
-//     if (loanBalanceElement.innerText == 0) {
-//         let amount = prompt ('Enter the amount you wish to loan.', '1000');
-//         if(amount <= parseInt(accountBalanceElement.textContent, 10)) {
-//             accountBalanceElement.innerText = parseInt(accountBalanceElement.textContent, 10) + parseInt(amount, 10);
-//             loanBalanceElement.innerText = amount;
-//         }
-//         else {
-//             alert('We require more minerals - you are not eligible for a loan');
-//         }
-//     }
-//     else{
-//     alert('NAN');
-// }
-// }
+const clickLoanButton = () =>{
+    if (loanBalanceElement.innerText == 0) {
+        let amount = prompt ('Enter the amount you wish to loan.', '1000');
+        if(amount <= parseInt(accountBalanceElement.textContent, 10)) {
+            accountBalanceElement.innerText = parseInt(accountBalanceElement.textContent, 10) + parseInt(amount, 10);
+            loanBalanceElement.innerText = amount;
+        }
+        else {
+            alert('We require more minerals - you are not eligible for a loan');
+        }
+    }
+    else{
+    alert("You need to repay your loan - otherwise we're gonna get ya!");
+}
+}
 
 
 
