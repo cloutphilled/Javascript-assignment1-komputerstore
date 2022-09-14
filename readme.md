@@ -42,7 +42,7 @@ Then you will receive a prompt congratulating the purchase
 ```
 
 
-![](https://gitlab.com/cloutphilled/javascript-assignment-1/-/blob/main/static/images/1505511535290.gif)
+![](https://gitlab.com/cloutphilled/javascript-assignment-1/-/blob/main/static/Images/1505511535290.gif)
 
 
 
