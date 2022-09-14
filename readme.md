@@ -13,6 +13,7 @@ In order to complete this project the following technologies have been used:
 - HTML5
 - CSS
 - JavaScript
+- Heroku
 
 ## Features
 - The user is able to add computers from the dropdown menu to the shopping cart
