@@ -20,6 +20,7 @@ In order to complete this project the following technologies have been used:
 - The product are showcased in the top left section where the picture and specs are presented
 - In order to make the purchase - the user needs the appropiate amount of funds in the bank account
 - The user is able to "work" to generate funds - from there transfer them to a bank account
+- The user is also able to request a loan from the bank
 
 ## Usage
 ```
@@ -43,7 +44,7 @@ When you have sufficient funds - you are able to click the 'Buy now' button.
 Then you will receive a prompt congratulating the purchase
 ```
 
-
+![Alt text](https://gitlab.com/cloutphilled/javascript-assignment-1/-/raw/main/static/Images/Vulture_SC1_HeadAnim1.webp)
 
 
 

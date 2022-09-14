@@ -138,12 +138,12 @@ const repay = () =>{
 
 
 
-
+repayLoanElement.addEventListener('click', repay);
 computersElement.addEventListener("change", handleComputerMenuChange);
 addElement.addEventListener("click", handleAddComputer);
 payButtonElement.addEventListener("click", handlePay);
 workButtonElement.addEventListener("click", clickWorkButton);
 toBankButton.addEventListener("click", clickBankButton);
 bankButtonElement.addEventListener('click', clickLoanButton);
-repayLoanElement.addEventListener('click', repay);
+
 
