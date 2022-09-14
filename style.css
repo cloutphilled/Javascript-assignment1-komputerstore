@@ -191,7 +191,7 @@ span {
         background-color: red;
     }
     20%{
-        background-color: aquamarine;
+        background-color: rgb(255, 255, 255);
     }
     40%{
         background-color: azure;
@@ -200,10 +200,10 @@ span {
         background-color: currentColor;
     }
     80%{
-        background-color: greenyellow;
+        background-color: rgb(53, 46, 97);
     }
     100%{
-        background-color: seagreen;
+        background-color: rgb(185, 29, 2);
     }
 }
 
