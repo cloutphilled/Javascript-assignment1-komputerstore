@@ -66,6 +66,7 @@ body {
     /* top: 3%;
     right: 36%; */
     width: 40px;
+    animation: rotation 1s infinite linear;
 }
 
 
@@ -120,12 +121,16 @@ button {
     left: 3%;
 }
 
-
+#pTotalDue{
+    position:absolute;
+    left:3%;
+    bottom:0%;
+}
 #totalDue {
     position: absolute;
-    left: 3%;
-    bottom: 3%;
-    z-index: 1;
+    left: 13.5%;
+    bottom: 3.1%;
+   
 }
 
 #accountBalance, #loan-balance, #workBalance,
@@ -236,27 +241,60 @@ span {
 @keyframes textclip{
     0% {
         color: red;
-        font-size: 50px;
+        font-size: 51px;
+        font-stretch: extra-expanded;
     }
-    20%{
+    10%{
         color: aquamarine;
         font-size: 52px;
     }
-    40%{
+    20%{
      color: azure;
-     font-size: 54px;
+     font-size: 53px;
     }
-    60%{
+    30%{
         color: currentColor;
-        font-size: 56px;
-    }
-    80%{
-        color: greenyellow;
         font-size: 54px;
     }
-    100%{
+    40%{
+        color: greenyellow;
+        font-size: 55px;
+    }
+    50%{
         color: seagreen;
-        font-size: 52px;
+        font-size: 56px;
+    }
+    60%{
+        color: rgb(243, 146, 177);
+        font-size: 55px;
+    }
+    70%{
+        color: cyan;
+        font-size: 54px;
+    }
+    80%{
+        color: lightslategray;
+        font-size: 53px;
+    }
+    80%{
+        color: lightsalmon;
+        font-size:52px
+    }
+    100%{
+        color:rgba(162, 160, 40, 0.49);
+        font-size:51px;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(-45deg);
+    }
+    50% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(-45deg);
     }
 }
 
