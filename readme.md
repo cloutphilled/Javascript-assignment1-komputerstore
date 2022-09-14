@@ -46,7 +46,7 @@ Then you will receive a prompt congratulating the purchase
 
 ![Alt text](https://gitlab.com/cloutphilled/javascript-assignment-1/-/raw/main/static/Images/Vulture_SC1_HeadAnim1.webp)
 
-
+[Link to heroku](https://js-assignment-komputerstore.herokuapp.com/)
 
 
 Created by Phillip Friis Petersen
