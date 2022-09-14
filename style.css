@@ -295,9 +295,11 @@ span {
 @keyframes rotation {
     0% {
         transform: rotate(-45deg);
+        width: 2.85%;
     }
     50% {
         transform: rotate(45deg);
+        
     }
     100% {
         transform: rotate(-45deg);

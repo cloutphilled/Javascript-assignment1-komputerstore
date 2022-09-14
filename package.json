@@ -1,0 +1,24 @@
+{
+  "name": "javascript-assignment-1",
+  "version": "1.0.0",
+  "description": "> Create a Dynamic Webpage using JS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/cloutphilled/javascript-assignment-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/cloutphilled/javascript-assignment-1/issues"
+  },
+  "homepage": "https://gitlab.com/cloutphilled/javascript-assignment-1#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
