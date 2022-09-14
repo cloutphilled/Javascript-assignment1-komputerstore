@@ -57,7 +57,7 @@ const handleComputerMenuChange = e => {
     const path = "https://noroff-komputer-store-api.herokuapp.com/";
     computerImageElement.src = path.concat(selectedComputer.image);
     computerTitleElement.innerText = selectedComputer.title;
-    computerDescriptionElement.innerText = "'" + selectedComputer.description + "'";
+    computerDescriptionElement.innerText = "' " + selectedComputer.description + " '";
     priceElement.innerText = "$" + selectedComputer.price;
 }  
   
@@ -69,20 +69,22 @@ const handleAddComputer = () => {
     const cartItem = document.createElement("li");
     const lineTotal = quantity * selectedComputer.price;
 
-    cartItem.innerText = `${selectedComputer.title} ${selectedComputer.price} ${quantity} ${lineTotal.toFixed(2)}`;
+    cartItem.innerText = `${selectedComputer.title}`;
     cartElement.appendChild(cartItem);
 
     totalDue += lineTotal;
-    totalDueElement.innerText = `Total Due: $ ${totalDue.toFixed(2)}`;
+    totalDueElement.innerText = totalDue;//`Total Due: $ ${totalDue.toFixed(2)}`;
 }
 
 // This function handles the payment
 // It then checks if there's enough funds on the account
 // If not --> not enough minerals
 const handlePay = () => {
-    if (parseInt(priceElement.innerText, 10) <= parseInt(accountBalanceElement.textContent, 10)) {
-        accountBalanceElement.innerText = parseInt(accountBalanceElement.textContent,10) - parseInt(priceElement.innerText,10);
-        alert('You have succesfully purchased the ' + computerTitleElement.innerText + '!');
+    if (parseInt(totalDueElement.innerText, 10) <= parseInt(accountBalanceElement.textContent, 10)) {
+        accountBalanceElement.innerText = parseInt(accountBalanceElement.textContent,10) - parseInt(totalDueElement.innerText,10);
+        alert('You have succesfully purchased the: ' + '\n' + cartElement.innerText);
+        cartElement.innerText= " ";
+        totalDueElement.innerText = " ";
     } 
     else {
         alert('You require more minerals!');
